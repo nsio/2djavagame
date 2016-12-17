@@ -1,0 +1,21 @@
+package br.com.expurgacao.riverblaze.database.dao;
+
+import com.j256.ormlite.dao.BaseDaoImpl;
+import com.j256.ormlite.support.ConnectionSource;
+
+import java.sql.SQLException;
+
+import br.com.expurgacao.riverblaze.database.entity.CheckPoint;
+
+/**
+ * Created by Nysio on 07/02/2016.
+ */
+public class CheckPointDAO extends BaseDaoImpl<CheckPoint, Integer> {
+
+    public CheckPointDAO(ConnectionSource cs) throws SQLException {
+        super(CheckPoint.class);
+        setConnectionSource(cs);
+        initialize();
+    }
+
+}
